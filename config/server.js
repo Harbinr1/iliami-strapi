@@ -9,4 +9,9 @@ module.exports = ({ env }) => ({
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
+
+  // Add or update the configuration for the users-permissions plugin
+  'users-permissions': {
+    jwtSecret: env('JWT_SECRET', 'yourGeneratedJwtSecret'),
+  },
 });
